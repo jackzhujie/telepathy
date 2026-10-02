@@ -1,0 +1,170 @@
+    Checking temp-app v0.1.0 (/Users/mac/project/telepathy/src-tauri)
+warning: unused import: `memory_service`
+ --> src/commands/rag.rs:3:38
+  |
+3 | use crate::services::{embedder, rag, memory_service};
+  |                                      ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `Engine` and `engine::general_purpose::STANDARD as BASE64`
+ --> src/services/parser/vision.rs:2:14
+  |
+2 | use base64::{engine::general_purpose::STANDARD as BASE64, Engine};
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^
+
+warning: unused imports: `Memory` and `self`
+ --> src/services/memory_service.rs:2:27
+  |
+2 | use crate::db::memories::{self, Memory};
+  |                           ^^^^  ^^^^^^
+
+warning: unused import: `crate::services::embedder`
+ --> src/services/memory_service.rs:3:5
+  |
+3 | use crate::services::embedder;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `rusqlite::Connection`
+ --> src/services/memory_service.rs:4:5
+  |
+4 | use rusqlite::Connection;
+  |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `tauri::Manager`
+ --> src/services/memory_service.rs:5:5
+  |
+5 | use tauri::Manager;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `uuid::Uuid`
+ --> src/services/memory_service.rs:6:5
+  |
+6 | use uuid::Uuid;
+  |     ^^^^^^^^^^
+
+error[E0599]: no method named `sample_token_greedy` found for opaque type `impl Iterator<Item = LlamaTokenData> + '_` in the current scope
+  --> src/services/inference/llama_adapter.rs:96:41
+   |
+96 |             let next_token = candidates.sample_token_greedy();
+   |                                         ^^^^^^^^^^^^^^^^^^^ method not found in `impl Iterator<Item = LlamaTokenData> + '_`
+
+warning: unused import: `futures_util::StreamExt`
+ --> src/commands/rag.rs:4:5
+  |
+4 | use futures_util::StreamExt;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `prompt`
+ --> src/commands/chat.rs:5:25
+  |
+5 | pub async fn ask_ollama(prompt: String, app_handle: AppHandle) -> Result<(), AppError> {
+  |                         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_prompt`
+  |
+  = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `path`
+  --> src/services/parser/vision.rs:34:26
+   |
+34 | pub async fn parse_image(path: &Path, app_handle: &AppHandle) -> Result<String, AppError> {
+   |                          ^^^^ help: if this is intentional, prefix it with an underscore: `_path`
+
+warning: unused variable: `app_handle`
+  --> src/services/parser/vision.rs:34:39
+   |
+34 | pub async fn parse_image(path: &Path, app_handle: &AppHandle) -> Result<String, AppError> {
+   |                                       ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_app_handle`
+
+warning: unused variable: `num_thread`
+  --> src/commands/rag.rs:79:9
+   |
+79 |     let num_thread = settings::get_setting(&conn, "num_thread")?
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_num_thread`
+
+warning: unused variable: `temperature`
+  --> src/commands/rag.rs:85:9
+   |
+85 |     let temperature = settings::get_setting(&conn, "temperature")?
+   |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_temperature`
+
+warning: unused variable: `num_gpu`
+  --> src/commands/rag.rs:88:9
+   |
+88 |     let num_gpu = settings::get_setting(&conn, "num_gpu")?
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_num_gpu`
+
+warning: unused variable: `repeat_penalty`
+  --> src/commands/rag.rs:91:9
+   |
+91 |     let repeat_penalty = settings::get_setting(&conn, "repeat_penalty")?
+   |         ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_repeat_penalty`
+
+warning: unused variable: `ollama_messages`
+   --> src/commands/rag.rs:127:9
+    |
+127 |     let ollama_messages = rag::build_ollama_messages_with_user(
+    |         ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_ollama_messages`
+
+warning: unused variable: `conv_id_clone`
+   --> src/commands/rag.rs:177:9
+    |
+177 |     let conv_id_clone = conv_id.clone();
+    |         ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_conv_id_clone`
+
+warning: unused variable: `chat_model_clone`
+   --> src/commands/rag.rs:179:9
+    |
+179 |     let chat_model_clone = chat_model.clone();
+    |         ^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_chat_model_clone`
+
+warning: unused variable: `cancel_token`
+   --> src/commands/rag.rs:184:9
+    |
+184 |     let cancel_token = get_cancel_token();
+    |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cancel_token`
+
+warning: unused variable: `user_msg_clone`
+   --> src/commands/rag.rs:186:9
+    |
+186 |     let user_msg_clone = user_msg.clone();
+    |         ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_user_msg_clone`
+
+warning: unused variable: `embedding_model_clone`
+   --> src/commands/rag.rs:187:9
+    |
+187 |     let embedding_model_clone = embedding_model.clone();
+    |         ^^^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_embedding_model_clone`
+
+warning: unused variable: `app_handle`
+  --> src/services/memory_service.rs:28:5
+   |
+28 |     app_handle: &tauri::AppHandle,
+   |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_app_handle`
+
+warning: unused variable: `user_query`
+  --> src/services/memory_service.rs:29:5
+   |
+29 |     user_query: &str,
+   |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_user_query`
+
+warning: unused variable: `ai_response`
+  --> src/services/memory_service.rs:30:5
+   |
+30 |     ai_response: &str,
+   |     ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_ai_response`
+
+warning: unused variable: `chat_model`
+  --> src/services/memory_service.rs:31:5
+   |
+31 |     chat_model: &str,
+   |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_chat_model`
+
+warning: unused variable: `embedding_model`
+  --> src/services/memory_service.rs:32:5
+   |
+32 |     embedding_model: &str,
+   |     ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_embedding_model`
+
+For more information about this error, try `rustc --explain E0599`.
+warning: `temp-app` (lib) generated 26 warnings
+error: could not compile `temp-app` (lib) due to 1 previous error; 26 warnings emitted

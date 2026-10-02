@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+target_scalar_build
+target_temp
+dist-ssr
+.pnpm-store
+.DS_Store
+*.local
+
+# Screenshots (auto-generated)
+screenshots/
+
+# Local dev data dir (used when TELEPATHY_DATA_DIR points inside the project)
+.data/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.worktrees
+
+# Tauri signing keys (NEVER commit these)
+src-tauri/telepathy.key
+src-tauri/telepathy.key.pub
+src-tauri/*.key
+src-tauri/*.key.pub
+
+# Deployment scripts (contain server credentials)
+scripts/
+scratch/

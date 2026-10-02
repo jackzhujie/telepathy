@@ -1,0 +1,50 @@
+{
+  "name": "telepathy",
+  "private": true,
+  "version": "0.3.9",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@milkdown/core": "^7.20.0",
+    "@milkdown/plugin-history": "^7.20.0",
+    "@milkdown/plugin-listener": "^7.20.0",
+    "@milkdown/plugin-prism": "^7.20.0",
+    "@milkdown/plugin-slash": "^7.20.0",
+    "@milkdown/preset-commonmark": "^7.20.0",
+    "@milkdown/preset-gfm": "^7.20.0",
+    "@milkdown/theme-nord": "^7.20.0",
+    "@milkdown/utils": "^7.20.0",
+    "@milkdown/vue": "^7.20.0",
+    "@tanstack/vue-virtual": "^3.13.23",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.7.0",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-process": "^2.3.1",
+    "@types/markdown-it": "^14.1.2",
+    "@vueuse/core": "^14.2.1",
+    "@vueuse/motion": "^3.0.3",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.1.1",
+    "pinia": "^3.0.4",
+    "prismjs": "^1.30.0",
+    "reka-ui": "^2.9.4",
+    "vue": "^3.5.13",
+    "vue-router": "^5.0.4"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^25.5.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.14",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10"
+  }
+}

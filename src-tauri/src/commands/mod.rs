@@ -1,0 +1,15 @@
+pub mod debug;
+pub mod document;
+pub mod greet;
+pub mod indexing;
+pub mod knowledge;
+pub mod memory;
+pub mod models;
+pub mod notifications;
+pub mod profile;
+pub mod projects;
+pub mod rag;
+pub mod reindex;
+pub mod settings;
+pub mod snaps;
+pub mod window;
