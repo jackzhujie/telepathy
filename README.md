@@ -37,7 +37,7 @@
 
 ### 从 Release 安装
 
-前往 [GitHub Releases](https://github.com/your-username/telepathy/releases) 下载对应平台的安装包。
+前往 [GitHub Releases](https://github.com/jackzhujie/telepathy/releases) 下载对应平台的安装包。
 
 ### 从源码构建
 
@@ -63,7 +63,7 @@ sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libappindicator3-dev 
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/telepathy.git
+git clone https://github.com/jackzhujie/telepathy.git
 cd telepathy
 
 # 安装前端依赖
@@ -136,7 +136,7 @@ TELEPATHY_DATA_DIR=/path/to/data pnpm tauri dev
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE) 开源。
+本项目采用 [Apache License 2.0](LICENSE) 开源。
 
 ## 贡献
 
