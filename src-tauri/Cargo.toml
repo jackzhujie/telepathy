@@ -1,6 +1,6 @@
 [package]
 name = "telepathy"
-version = "0.3.9"
+version = "0.1.0"
 description = "A local-first AI knowledge base app"
 authors = ["you"]
 edition = "2021"
