@@ -1,4 +1,4 @@
-import { ref, toRef, markRaw } from 'vue';
+import { ref, toRef } from 'vue';
 import { useSettingsStore } from '@/stores/settings';
 
 // Updater is disabled in the open-source build.
