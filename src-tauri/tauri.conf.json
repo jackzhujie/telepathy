@@ -28,10 +28,7 @@
   },
   "bundle": {
     "active": true,
-    "targets": [
-      "deb",
-      "rpm"
-    ],
+    "targets": "all",
     "macOS": {
       "minimumSystemVersion": "10.15"
     },

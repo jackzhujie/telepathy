@@ -70,6 +70,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_BUNDLER_DMG_IGNORE_CI: 'true'
+          # Skip AppImage on Linux CI (linuxdeploy fails)
+          TAURI_BUNDLER_SKIP_APPIMAGE: ${{ matrix.platform == 'ubuntu-22.04' && 'true' || 'false' }}
         with:
           tagName: ${{ github.ref_name }}
           releaseName: 'Telepathy ${{ github.ref_name }}'
